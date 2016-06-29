@@ -64,6 +64,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.post('/api/users/login', function (req, res) {
+
+    res.send({info: {username :"dinusha"}});
+
+});
+
 app.get('/*', function (req, res) {
   const location = createLocation(req.url);
 

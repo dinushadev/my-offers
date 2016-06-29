@@ -11,6 +11,7 @@ import Home from '../components/Home'
 import Header from '../components/layout/Header'
 import Paper from 'material-ui/lib/paper';
 import cookie from 'react-cookie';
+import CreditCardList from '../components/CreditCardList';
 
 
 class App extends Component {
@@ -60,9 +61,9 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <div style={{paddingLeft: 256, paddingTop: 0, margin: '48px 72px'}}>
-          <h2 style={{fontWeight:100}}>Title</h2>
-          <Paper style={{padding:20}}>
+        <div style={{paddingLeft: 256, paddingTop: 0, margin: '5px 5px'}}>
+          <CreditCardList />
+          <Paper style={{padding:20,margin: '5px 0px'}}>
           {!this.props.children && <Home />}
           {this.props.children}
           </Paper>

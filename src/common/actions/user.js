@@ -38,7 +38,7 @@ export function auth(username, password) {
     console.log('From function auth');
     return {
       type: LOGIN,
-      promise: request.post(`http://${config.apiHost}:${config.apiPort}/api/users/login`, {username:username,password:password})
+      promise: request.post(`api/users/login`, {username:username,password:password})
     };
 }
 

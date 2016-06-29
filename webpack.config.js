@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
       }),
       new ExtractTextPlugin("app.css"),
       new webpack.optimize.UglifyJsPlugin({minimize: true})
-    ]  
+    ]
   });
 
 }else{
@@ -87,15 +87,15 @@ if (process.env.NODE_ENV === 'production') {
 
     ]},
     entry : [
-      'webpack-hot-middleware/client',
+      'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails
       './src/client/index.js'
     ],
     plugins : [
       new webpack.HotModuleReplacementPlugin(),
       new ExtractTextPlugin("app.css")
-    ]  
+    ]
   });
-  
+
 }
 
 module.exports = webpackConfig;

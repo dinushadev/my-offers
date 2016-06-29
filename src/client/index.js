@@ -7,11 +7,16 @@ import { ReduxRouter } from 'redux-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import "../../styles/index.css";
+
+
 const history = createBrowserHistory();
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore(initialState);
 const rootElement = document.getElementById('root');
+
+injectTapEventPlugin();
 console.log(`suck it:`);
 console.log(routes);
 ReactDOM.render(
